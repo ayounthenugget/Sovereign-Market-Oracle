@@ -20,4 +20,4 @@ EXPOSE 8080
 # Run the web service on container startup.
 # We use the --server.port 8080 flag to match Cloud Run's requirements
 # This tells Streamlit to be "headless" and use the port Google assigns
-CMD streamlit run oracle_ui.py --server.port=${PORT:-8080} --server.address=0.0.0.0 --server.headless=true
+CMD ["streamlit", "run", "oracle_ui.py", "--server.port=8080", "--server.address=0.0.0.0"]
